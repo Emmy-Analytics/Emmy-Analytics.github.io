@@ -1,0 +1,464 @@
+/* =========================
+   PYTHON INTERACTIVE APP
+========================= */
+
+.python-app-page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 30px;
+}
+
+.python-app-hero {
+    max-width: 700px;
+    margin-bottom: 55px;
+}
+
+.python-app-hero h1 {
+    font-size: 54px;
+    line-height: 1.05;
+    margin: 10px 0 20px;
+}
+
+.python-app-hero p:last-child {
+    color: #666;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* APP */
+
+.library-app {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+
+    min-height: 600px;
+
+    background: #fff;
+
+    border: 1px solid #ddd;
+
+    border-radius: 22px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.06);
+}
+
+
+/* SIDEBAR */
+
+.library-sidebar {
+    padding: 28px;
+
+    background: #f7f7f7;
+
+    border-right: 1px solid #ddd;
+}
+
+.sidebar-label {
+    color: #999;
+    font-size: 10px;
+    letter-spacing: 1.4px;
+    font-weight: 600;
+
+    margin-bottom: 22px;
+}
+
+.app-menu {
+    width: 100%;
+
+    padding: 13px 12px;
+
+    margin-bottom: 5px;
+
+    border: none;
+
+    background: transparent;
+
+    text-align: left;
+
+    border-radius: 9px;
+
+    cursor: pointer;
+
+    color: #555;
+
+    font-size: 13px;
+
+    transition: 0.2s ease;
+}
+
+.app-menu:hover {
+    background: #eee;
+}
+
+.app-menu.active {
+    background: #9D0759;
+    color: white;
+}
+
+
+/* CONTENT */
+
+.library-content {
+    padding: 42px;
+}
+
+.app-panel {
+    display: none;
+}
+
+.app-panel.active {
+    display: block;
+}
+
+.panel-label {
+    color: #999;
+
+    font-size: 10px;
+
+    letter-spacing: 1.4px;
+
+    font-weight: 600;
+
+    margin-bottom: 12px;
+}
+
+.app-panel h2 {
+    margin: 0 0 12px;
+
+    font-size: 29px;
+}
+
+.panel-description {
+    color: #666;
+
+    line-height: 1.7;
+
+    margin-bottom: 28px;
+}
+
+
+/* SEARCH */
+
+.search-box {
+    display: flex;
+
+    gap: 10px;
+
+    margin-bottom: 25px;
+}
+
+.search-box input,
+.extension-form input {
+    flex: 1;
+
+    padding: 13px 14px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 9px;
+
+    font-size: 13px;
+
+    outline: none;
+}
+
+.search-box input:focus,
+.extension-form input:focus {
+    border-color: #9D0759;
+}
+
+.search-box button,
+.extension-form button {
+    padding: 13px 20px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #9D0759;
+
+    color: white;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+/* RESULT */
+
+.result-area {
+    min-height: 220px;
+}
+
+.member-card {
+    padding: 24px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 15px;
+}
+
+.member-name {
+    font-size: 22px;
+
+    font-weight: 700;
+
+    margin-bottom: 6px;
+}
+
+.member-book {
+    color: #9D0759;
+
+    font-weight: 600;
+
+    margin-bottom: 20px;
+}
+
+.member-details {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 14px;
+}
+
+.member-details div {
+    padding-top: 12px;
+
+    border-top: 1px solid #eee;
+}
+
+.member-details span {
+    display: block;
+
+    color: #999;
+
+    font-size: 10px;
+
+    letter-spacing: 0.8px;
+
+    margin-bottom: 5px;
+}
+
+.member-details strong {
+    font-size: 13px;
+}
+
+.status-late {
+    color: #c24a4a;
+}
+
+.status-active {
+    color: #3b9b6b;
+}
+
+.status-frozen {
+    color: #9D0759;
+}
+
+.empty-state {
+    padding: 30px;
+
+    background: #f7f7f7;
+
+    border-radius: 14px;
+
+    color: #666;
+}
+
+.empty-state code {
+    color: #9D0759;
+}
+
+
+/* BOOKS */
+
+.book-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+}
+
+.book-card {
+    padding: 20px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 13px;
+}
+
+.book-card strong {
+    display: block;
+
+    margin-bottom: 8px;
+}
+
+.book-card span {
+    color: #777;
+
+    font-size: 12px;
+}
+
+
+/* RULES */
+
+.rules-list {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+}
+
+.rules-list div {
+    padding: 20px;
+
+    background: #f7f7f7;
+
+    border-radius: 13px;
+}
+
+.rules-list strong {
+    display: block;
+
+    color: #9D0759;
+
+    font-size: 22px;
+
+    margin-bottom: 7px;
+}
+
+.rules-list span {
+    color: #666;
+
+    font-size: 12px;
+}
+
+.rule-note {
+    margin-top: 20px;
+
+    padding: 18px;
+
+    border-left: 3px solid #9D0759;
+
+    background: #fbf2f7;
+
+    color: #666;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+/* EXTENSION */
+
+.extension-form {
+    max-width: 480px;
+
+    display: grid;
+
+    gap: 9px;
+}
+
+.extension-form label {
+    color: #777;
+
+    font-size: 12px;
+
+    margin-top: 8px;
+}
+
+.extension-form button {
+    margin-top: 10px;
+
+    width: fit-content;
+}
+
+.validation-result {
+    margin-top: 22px;
+
+    padding: 20px;
+
+    border-radius: 13px;
+
+    background: #f7f7f7;
+
+    color: #666;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+.validation-result.success {
+    background: #eef8f2;
+    color: #2d704a;
+}
+
+.validation-result.error {
+    background: #fff1f1;
+    color: #a83b3b;
+}
+
+.demo-note {
+    margin-top: 25px;
+
+    color: #888;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .python-app-page {
+        padding: 55px 18px;
+    }
+
+    .python-app-hero h1 {
+        font-size: 40px;
+    }
+
+    .library-app {
+        grid-template-columns: 1fr;
+    }
+
+    .library-sidebar {
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 6px;
+
+        border-right: none;
+
+        border-bottom: 1px solid #ddd;
+    }
+
+    .sidebar-label {
+        grid-column: 1 / -1;
+    }
+
+    .library-content {
+        padding: 25px;
+    }
+
+    .member-details,
+    .book-grid,
+    .rules-list {
+        grid-template-columns: 1fr;
+    }
+
+}

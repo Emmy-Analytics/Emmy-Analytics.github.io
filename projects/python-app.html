@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Python Library System | Emmy Jacklyn Pontoan
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <link
+    rel="stylesheet"
+    href="../css/project.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/python-app.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <header class="project-header">
+
+        <a
+            href="../index.html"
+            class="project-logo"
+        >
+            Emmy.
+        </a>
+
+        <a
+            href="python.html"
+            class="back-link"
+        >
+            ← Back to Python Project
+        </a>
+
+    </header>
+
+
+    <main class="python-app-page">
+
+
+        <!-- HEADER -->
+
+        <section class="python-app-hero">
+
+            <p class="project-label">
+                PYTHON INTERACTIVE DEMO
+            </p>
+
+            <h1>
+                Library Management System
+            </h1>
+
+            <p>
+                A hands-on browser demo based on the
+                Python Capstone Project.
+            </p>
+
+        </section>
+
+
+        <!-- APP -->
+
+        <section class="library-app">
+
+
+            <!-- SIDEBAR -->
+
+            <aside class="library-sidebar">
+
+                <p class="sidebar-label">
+                    LIBRARY SYSTEM
+                </p>
+
+
+                <button
+                    class="app-menu active"
+                    onclick="showPanel('member')"
+                >
+                    Search Member
+                </button>
+
+
+                <button
+                    class="app-menu"
+                    onclick="showPanel('books')"
+                >
+                    View Books
+                </button>
+
+
+                <button
+                    class="app-menu"
+                    onclick="showPanel('rules')"
+                >
+                    Loan Rules
+                </button>
+
+
+                <button
+                    class="app-menu"
+                    onclick="showPanel('extension')"
+                >
+                    Test Extension
+                </button>
+
+            </aside>
+
+
+            <!-- CONTENT -->
+
+            <section class="library-content">
+
+
+                <!-- MEMBER -->
+
+                <div
+                    class="app-panel active"
+                    id="member-panel"
+                >
+
+                    <p class="panel-label">
+                        INFORMATION
+                    </p>
+
+                    <h2>
+                        Search member data
+                    </h2>
+
+                    <p class="panel-description">
+                        Enter an existing member ID from
+                        the Python project data.
+                    </p>
+
+
+                    <div class="search-box">
+
+                        <input
+                            type="text"
+                            id="member-input"
+                            placeholder="Example: cipuy29"
+                        >
+
+                        <button
+                            onclick="searchMember()"
+                        >
+                            Search
+                        </button>
+
+                    </div>
+
+
+                    <div
+                        class="result-area"
+                        id="member-result"
+                    >
+
+                        <div class="empty-state">
+
+                            <strong>
+                                Try an ID
+                            </strong>
+
+                            <p>
+                                Example:
+                                <code>cipuy29</code>
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- BOOKS -->
+
+                <div
+                    class="app-panel"
+                    id="books-panel"
+                >
+
+                    <p class="panel-label">
+                        INVENTORY
+                    </p>
+
+                    <h2>
+                        Book inventory
+                    </h2>
+
+                    <p class="panel-description">
+                        Current book data from the
+                        Python project.
+                    </p>
+
+
+                    <div
+                        class="book-grid"
+                        id="book-list"
+                    >
+                    </div>
+
+                </div>
+
+
+
+                <!-- RULES -->
+
+                <div
+                    class="app-panel"
+                    id="rules-panel"
+                >
+
+                    <p class="panel-label">
+                        SYSTEM RULES
+                    </p>
+
+                    <h2>
+                        Loan rules
+                    </h2>
+
+
+                    <div class="rules-list">
+
+                        <div>
+                            <strong>
+                                14 days
+                            </strong>
+
+                            <span>
+                                Standard loan period
+                            </span>
+                        </div>
+
+
+                        <div>
+                            <strong>
+                                7 days
+                            </strong>
+
+                            <span>
+                                Maximum extension
+                            </span>
+                        </div>
+
+
+                        <div>
+                            <strong>
+                                Rp10.000
+                            </strong>
+
+                            <span>
+                                Fine per late day
+                            </span>
+                        </div>
+
+
+                        <div>
+                            <strong>
+                                Rp900.000
+                            </strong>
+
+                            <span>
+                                Maximum fine
+                            </span>
+                        </div>
+
+
+                        <div>
+                            <strong>
+                                90 days
+                            </strong>
+
+                            <span>
+                                Maximum overdue period
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="rule-note">
+
+                        Members with an outstanding
+                        fine cannot extend their loan.
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- EXTENSION -->
+
+                <div
+                    class="app-panel"
+                    id="extension-panel"
+                >
+
+                    <p class="panel-label">
+                        VALIDATION DEMO
+                    </p>
+
+                    <h2>
+                        Test loan extension
+                    </h2>
+
+                    <p class="panel-description">
+                        This follows the validation rules
+                        used in the Python project.
+                    </p>
+
+
+                    <div class="extension-form">
+
+                        <label>
+                            Member ID
+                        </label>
+
+                        <input
+                            type="text"
+                            id="extension-member"
+                            placeholder="Example: cipuy29"
+                        >
+
+
+                        <label>
+                            Additional days
+                        </label>
+
+                        <input
+                            type="number"
+                            id="extension-days"
+                            min="0"
+                            max="7"
+                            value="1"
+                        >
+
+
+                        <button
+                            onclick="testExtension()"
+                        >
+                            Test Extension
+                        </button>
+
+                    </div>
+
+
+                    <div
+                        class="validation-result"
+                        id="extension-result"
+                    >
+
+                        <span>
+                            Enter a member ID to test.
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
+        </section>
+
+
+        <div class="demo-note">
+
+            This interactive demo mirrors the
+            Python project's data and business rules
+            for portfolio presentation.
+
+        </div>
+
+
+    </main>
+
+
+    <script src="../js/python-app.js"></script>
+
+</body>
+
+</html>
