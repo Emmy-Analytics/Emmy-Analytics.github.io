@@ -1918,3 +1918,62 @@ h3 {
 
     font-weight: 600;
 }
+
+.dashboard-link {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    padding: 12px 20px;
+
+    background: #9D0759;
+    color: #ffffff;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition: 0.2s ease;
+}
+
+.dashboard-link:hover {
+    background: #C02F7F;
+    transform: translateY(-2px);
+}
+
+
+.project-card-image {
+    width: 100%;
+    height: 270px;
+    overflow: hidden;
+    border-radius: 14px 14px 0 0;
+}
+
+.project-card-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+
+    object-fit: cover;
+    object-position: center top;
+}
+
+.project-card:hover .project-card-image img {
+    transform: scale(1.03);
+}
+
+.project-card-content {
+    padding: 28px 32px 32px;
+}
+
+.project-tools {
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    color: #9D0759 !important;
+
+    font-size: 14px;
+    font-weight: 600;
+}
